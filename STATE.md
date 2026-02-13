@@ -1,7 +1,7 @@
 # Study State
 
 ## Current Phase
-✅ **STUDY COMPLETE - Ready for Publication**
+✅ **STUDY COMPLETE AND PUBLISHED**
 
 ## Phase Status
 | Phase | Status | Iteration | Complete |
@@ -13,7 +13,7 @@
 | Synthesis | Completed | 1 | Yes |
 | Manuscript | Completed | 1 | Yes |
 | Presentation | Completed | 1 | Yes |
-| GitHub Publication | Pending | 0 | No |
+| GitHub Publication | Completed | 1 | Yes |
 
 ## Data Sources Used
 - [x] PFAS datasets: PFC_D, PFC_E, PFC_F, PFC_G (2005-2012)
@@ -87,7 +87,8 @@ pfas-phenoage-2026-02-13/
 ```
 
 ## Next Step
-📤 **Publish to GitHub** (Elwood-Research organization)
+✅ **Study Published to GitHub**
+🔗 https://github.com/Elwood-Research/pfas-phenoage-nhanes-2005-2012
 
 ## Notes
 - Study initiated: 2026-02-13
