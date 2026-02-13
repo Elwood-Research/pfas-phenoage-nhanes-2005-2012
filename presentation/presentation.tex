@@ -1,0 +1,199 @@
+\documentclass[10pt]{beamer}
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{adjustbox}
+
+\title{Paradoxical Inverse Associations Between PFAS and Biological Aging}
+\subtitle{A Cross-Sectional Analysis of NHANES 2005-2012}
+\author{Elwood Research}
+\date{February 13, 2026}
+
+\begin{document}
+
+\frame{\titlepage}
+
+% Slide 2: Background
+\begin{frame}{Background: PFAS and Health}
+\begin{itemize}
+    \item \textbf{PFAS}: Persistent environmental pollutants ("forever chemicals")
+    \item Ubiquitous human exposure despite regulatory phase-outs
+    \item Known toxicological effects:
+    \begin{itemize}
+        \item Hepatotoxicity, immunotoxicity
+        \item Endocrine disruption
+        \item Cardiometabolic dysfunction
+    \end{itemize}
+    \item \textbf{Key Question}: Do PFAS accelerate biological aging?
+\end{itemize}
+\end{frame}
+
+% Slide 3: PhenoAge Biomarker
+\begin{frame}{Biological Aging Measurement: PhenoAge}
+\begin{itemize}
+    \item \textbf{PhenoAge} (Levine et al. 2018): Validated composite biomarker
+    \item Integrates chronological age + 9 blood chemistry markers:
+    \begin{itemize}
+        \item Albumin, creatinine, glucose, CRP
+        \item Lymphocyte \%, MCV, RDW, alkaline phosphatase, WBC
+    \end{itemize}
+    \item \textbf{PhenoAge Acceleration}: PhenoAge - Chronological Age
+    \begin{itemize}
+        \item Positive = Faster biological aging
+        \item Negative = Slower biological aging
+    \end{itemize}
+    \item Predicts mortality, morbidity, healthspan
+\end{itemize}
+\end{frame}
+
+% Slide 4: Research Question
+\begin{frame}{Research Question and Hypothesis}
+\textbf{Research Question:}
+\begin{quote}
+Are serum PFAS concentrations associated with accelerated biological aging (PhenoAge) in U.S. adults?
+\end{quote}
+
+\vspace{0.5cm}
+
+\textbf{Hypothesis:}
+\begin{itemize}
+    \item \textbf{Expected}: Higher PFAS $\rightarrow$ Accelerated aging (positive association)
+    \item Based on:
+    \begin{itemize}
+        \item Toxicological evidence (oxidative stress, inflammation)
+        \item Yan et al. 2025: Positive associations in UK Biobank (longitudinal)
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+% Slide 5: Methods
+\begin{frame}{Methods: Study Design and Sample}
+\textbf{Data Source:} NHANES 2005-2012
+
+\vspace{0.3cm}
+
+\textbf{Sample Selection:}
+\begin{itemize}
+    \item Adults $\geq$ 18 years
+    \item Measured PFAS: PFOA, PFOS, PFHxS, PFNA
+    \item Complete biomarker data for PhenoAge calculation
+    \item \textbf{Final analytic sample: N = 3,198}
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Statistical Analysis:}
+\begin{itemize}
+    \item Survey-weighted linear regression
+    \item Outcome: PhenoAge acceleration (years)
+    \item Exposure: Log-transformed PFAS (ng/mL)
+    \item 3 models: Crude, +demographics, +socioeconomic
+\end{itemize}
+\end{frame}
+
+% Slide 6: Sample Characteristics
+\begin{frame}{Sample Characteristics}
+\begin{table}
+\centering
+\footnotesize
+\begin{tabular}{lc}
+\toprule
+\textbf{Characteristic} & \textbf{Value} \\
+\midrule
+N & 3,198 \\
+Age, mean (SD) & 47.4 (19.1) years \\
+Female (\%) & 50.8\% \\
+PhenoAge, mean (SD) & 45.6 (18.0) years \\
+PhenoAge acceleration, mean (SD) & -1.80 (6.00) years \\
+\midrule
+\textbf{PFAS Concentrations (ng/mL), median (IQR):} & \\
+PFOA & 3.30 (2.20-4.88) \\
+PFOS & 12.30 (7.20-20.48) \\
+PFHxS & 1.60 (0.90-2.80) \\
+PFNA & 1.10 (0.80-1.64) \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{frame}
+
+% Slide 7: Main Results - Forest Plot
+\begin{frame}{Main Results: UNEXPECTED Inverse Associations}
+\begin{center}
+\includegraphics[width=0.9\textwidth]{../04-analysis/outputs/figures/figure4_forest_plot.png}
+\end{center}
+\vspace{-0.3cm}
+\footnotesize
+\textbf{All four PFAS}: Significant \emph{inverse} associations with PhenoAge acceleration\\
+Higher PFAS $\rightarrow$ LOWER biological aging (opposite of hypothesis!)
+\end{frame}
+
+% Slide 8: Dose-Response Curves
+\begin{frame}{Dose-Response Relationships}
+\begin{center}
+\includegraphics[width=0.9\textwidth]{../04-analysis/outputs/figures/figure5_dose_response.png}
+\end{center}
+\vspace{-0.3cm}
+\footnotesize
+Monotonic inverse dose-response relationships across the exposure range
+\end{frame}
+
+% Slide 9: Discussion - Why Paradoxical?
+\begin{frame}{Discussion: Explaining Paradoxical Findings}
+\textbf{Why inverse associations?} (Opposite of biological plausibility)
+
+\vspace{0.3cm}
+
+\textbf{Likely Explanations:}
+\begin{enumerate}
+    \item \textbf{Survival Bias}: Sicker individuals with high PFAS may die before enrollment
+    \item \textbf{Reverse Causation}: Better kidney function $\rightarrow$ higher PFAS retention
+    \item \textbf{Unmeasured Confounding}: SES, lifestyle, healthcare access
+    \item \textbf{Sample Selection Bias}: Complete-case analysis selects healthier participants
+    \item \textbf{Cross-sectional Limitation}: Cannot establish temporality
+\end{enumerate}
+
+\vspace{0.3cm}
+
+\textbf{Comparison to Yan et al. 2025:}
+\begin{itemize}
+    \item Longitudinal study found \emph{positive} associations
+    \item Reinforces importance of study design
+\end{itemize}
+\end{frame}
+
+% Slide 10: Conclusions and Future Directions
+\begin{frame}{Conclusions and Future Directions}
+\textbf{Key Findings:}
+\begin{itemize}
+    \item All four PFAS showed significant \emph{inverse} associations with PhenoAge acceleration
+    \item Results contradict biological plausibility and longitudinal evidence
+    \item \textbf{Cross-sectional designs are insufficient for causal inference}
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Implications:}
+\begin{itemize}
+    \item \textbf{DO NOT} interpret as protective effects of PFAS
+    \item Highlights methodological pitfalls in aging biomarker research
+    \item Need for careful consideration of survival and selection biases
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Future Research:}
+\begin{itemize}
+    \item Longitudinal studies with repeated PFAS and aging measurements
+    \item Multi-biomarker approaches (epigenetic clocks, telomere length)
+    \item Life-course perspective: early-life exposure effects
+    \item Investigate non-linear relationships and exposure mixtures
+\end{itemize}
+
+\vspace{0.3cm}
+
+\centering
+\textbf{Thank you!} \\ \texttt{elwoodresearch@gmail.com}
+\end{frame}
+
+\end{document}

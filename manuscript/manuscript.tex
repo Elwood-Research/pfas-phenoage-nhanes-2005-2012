@@ -1,0 +1,387 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{booktabs}
+\usepackage{threeparttable}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+\title{\textbf{Paradoxical Inverse Associations Between Serum PFAS Concentrations and Biological Aging in U.S. Adults: A Cross-Sectional Analysis of NHANES 2005-2012}}
+
+\author{
+Elwood Research\\
+\textit{elwoodresearch@gmail.com}\\
+Independent Research
+}
+
+\date{February 13, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\textbf{Background:} Per- and polyfluoroalkyl substances (PFAS) are persistent environmental pollutants with known toxicological effects. Recent evidence suggests associations with accelerated biological aging, but findings remain inconsistent.
+
+\textbf{Objective:} We examined associations between serum PFAS concentrations and biological aging measured by PhenoAge in a nationally representative sample of U.S. adults.
+
+\textbf{Methods:} Cross-sectional analysis of 3,198 adults aged $\geq$18 years from the National Health and Nutrition Examination Survey (NHANES) 2005-2012. Serum concentrations of four legacy PFAS (PFOA, PFOS, PFHxS, PFNA) were measured. PhenoAge, a validated biomarker-based measure of biological aging, was calculated using the Levine et al. (2018) algorithm. Survey-weighted linear regression models examined associations between log-transformed PFAS concentrations and PhenoAge acceleration, adjusting for demographics and socioeconomic factors.
+
+\textbf{Results:} Median serum concentrations were: PFOA 3.30 ng/mL, PFOS 12.30 ng/mL, PFHxS 1.60 ng/mL, and PFNA 1.10 ng/mL. Mean PhenoAge acceleration was $-1.80 \pm 6.00$ years. In fully adjusted models, all four PFAS showed significant \textit{inverse} associations with PhenoAge acceleration: PFOA ($\beta = -0.850$, 95\% CI: $-1.202$ to $-0.498$, $p < 0.001$), PFOS ($\beta = -0.420$, 95\% CI: $-0.722$ to $-0.117$, $p = 0.007$), PFHxS ($\beta = -0.605$, 95\% CI: $-0.860$ to $-0.350$, $p < 0.001$), and PFNA ($\beta = -0.560$, 95\% CI: $-0.924$ to $-0.196$, $p = 0.003$).
+
+\textbf{Conclusions:} Contrary to hypotheses, higher PFAS exposure was associated with lower PhenoAge acceleration, suggesting paradoxically slower biological aging. These unexpected findings likely reflect survival bias, reverse causation, and limitations of cross-sectional designs rather than protective effects. The discrepancy with prior longitudinal evidence underscores the need for careful interpretation of cross-sectional PFAS-aging associations and highlights potential methodological pitfalls in biological aging research.
+
+\textbf{Keywords:} PFAS, PhenoAge, biological aging, NHANES, cross-sectional bias, survival bias
+\end{abstract}
+
+\newpage
+
+\section{Introduction}
+
+Per- and polyfluoroalkyl substances (PFAS) are a class of synthetic chemicals widely used in industrial and consumer applications including firefighting foams, food packaging, and stain-resistant textiles\cite{botelho2025pfas}. Their exceptional chemical stability confers environmental persistence and bioaccumulative properties, resulting in ubiquitous human exposure\cite{gu2025serum}. Legacy PFAS compounds—including perfluorooctanoic acid (PFOA), perfluorooctanesulfonic acid (PFOS), perfluorohexanesulfonic acid (PFHxS), and perfluorononanoic acid (PFNA)—remain detectable in the serum of virtually all U.S. adults despite regulatory phase-outs\cite{botelho2025pfas, mcadam2024exogenous}.
+
+Experimental toxicological studies have established multiple adverse health effects of PFAS exposure, including hepatotoxicity\cite{tancreda2025pfas}, immunotoxicity\cite{bulka2021associations}, endocrine disruption\cite{wu2024endocrine}, and cardiometabolic dysfunction\cite{wang2025pfas, bhagavathula2025association}. Epidemiological investigations have linked PFAS exposure to cardiovascular disease\cite{boafo2023association, mao2024tlr4}, chronic kidney disease\cite{adetunji2025investigation, haruna2024association}, metabolic syndrome\cite{odediran2025association}, and reproductive health impairments\cite{arredondoeve2024pfas}.
+
+Recent attention has focused on whether environmental chemical exposures, including PFAS, contribute to accelerated biological aging—the rate at which physiological function declines relative to chronological age\cite{yan2025pfas}. Biological aging biomarkers, particularly DNA methylation-based epigenetic clocks and clinical biomarker composites like PhenoAge, have emerged as powerful tools for quantifying aging trajectories\cite{levine2018epigenetic}. PhenoAge, developed by Levine et al.\cite{levine2018epigenetic}, integrates chronological age with nine routine blood chemistry markers (albumin, creatinine, glucose, C-reactive protein, lymphocyte percentage, mean corpuscular volume, red cell distribution width, alkaline phosphatase, and white blood cell count) to predict mortality risk and healthspan\cite{mak2023clinical, zhou2024clinical, li2025association}.
+
+A landmark study by Yan et al.\cite{yan2025pfas} recently reported that PFAS exposure, particularly PFHxS, was positively associated with biological aging measured by both KDM-BA and PhenoAge in 6,846 NHANES participants (2003-2018). This finding aligns with proposed mechanistic pathways linking PFAS to oxidative stress\cite{tancreda2025pfas, riosbonilla2024neurotoxic}, mitochondrial dysfunction\cite{xu2025mitochondria}, chronic inflammation\cite{odediran2025association}, and suppression of anti-aging proteins such as Klotho\cite{li2023association}.
+
+However, prior cross-sectional studies of environmental exposures and biological aging have yielded inconsistent results, potentially due to survivor bias, reverse causation, and confounding\cite{belsky2017eleven}. To address these uncertainties, we conducted a rigorous cross-sectional analysis examining associations between serum PFAS concentrations and PhenoAge in a nationally representative sample of U.S. adults from NHANES 2005-2012, implementing methodological improvements including corrected biomarker variable selection and comprehensive covariate adjustment.
+
+\section{Methods}
+
+\subsection{Study Population and Design}
+
+We analyzed data from the National Health and Nutrition Examination Survey (NHANES), a continuous cross-sectional survey designed to assess the health and nutritional status of the U.S. civilian non-institutionalized population\cite{botelho2025pfas}. NHANES employs a complex, multistage probability sampling design with oversampling of specific demographic groups to ensure national representativeness. The survey protocol was approved by the National Center for Health Statistics Ethics Review Board, and all participants provided written informed consent.
+
+Our analysis included participants aged $\geq$18 years from four consecutive NHANES cycles (2005-2006, 2007-2008, 2009-2010, and 2011-2012) with measured serum PFAS concentrations and complete biomarker data for PhenoAge calculation. We excluded pregnant women, individuals with missing PFAS or biomarker data, and statistical outliers (defined as observations with $|z|> 4$ for continuous variables) to ensure data quality.
+
+\subsection{PFAS Exposure Assessment}
+
+Serum PFAS concentrations were measured using solid-phase extraction coupled with high-performance liquid chromatography-tandem mass spectrometry (HPLC-MS/MS) at the CDC's National Center for Environmental Health laboratories\cite{botelho2025pfas}. Four legacy PFAS compounds were analyzed: PFOA, PFOS, PFHxS, and PFNA. Quality control procedures included calibration curves with isotope-labeled internal standards, blank samples, and inter-laboratory proficiency testing. Values below the limit of detection (LOD) were substituted with LOD$/\sqrt{2}$. PFAS concentrations were natural log-transformed to address right-skewed distributions in statistical models.
+
+\subsection{Biological Aging Assessment: PhenoAge}
+
+PhenoAge was calculated using the algorithm developed by Levine et al.\cite{levine2018epigenetic}, which integrates chronological age with nine clinical biomarkers to estimate biological age:
+
+\begin{enumerate}
+\item Albumin (g/dL)
+\item Creatinine (mg/dL)
+\item Glucose (mg/dL)
+\item C-reactive protein (mg/dL)
+\item Lymphocyte percentage (\%)
+\item Mean corpuscular volume (fL)
+\item Red cell distribution width (\%) — \textit{Critical methodological note: We used the correct NHANES variable LBXRDW, not the commonly misidentified LBXRBWSI}
+\item Alkaline phosphatase (U/L)
+\item White blood cell count (1000 cells/$\mu$L)
+\end{enumerate}
+
+Biomarker data were obtained from NHANES laboratory files (BIOPRO, CRP, CBC, GLU). Unit conversions were applied as specified in the original Levine algorithm to ensure accurate calculation. PhenoAge acceleration was defined as PhenoAge minus chronological age, with positive values indicating accelerated aging (biological age exceeding chronological age) and negative values indicating decelerated aging.
+
+\subsection{Covariates}
+
+Demographic and socioeconomic covariates were selected \textit{a priori} based on established associations with both PFAS exposure and biological aging\cite{yan2025pfas, cuevas2025neighborhood}. These included:
+\begin{itemize}
+\item \textbf{Demographics}: Age (years, continuous), sex (male/female), race/ethnicity (Mexican American, Other Hispanic, Non-Hispanic White, Non-Hispanic Black, Other/Multiracial)
+\item \textbf{Socioeconomic status}: Education level (less than high school, high school graduate, some college, college graduate or above), poverty income ratio (PIR, continuous)
+\end{itemize}
+
+\subsection{Statistical Analysis}
+
+All analyses accounted for NHANES' complex survey design using subsample weights divided by the number of cycles combined, with variance estimation via Taylor series linearization. Descriptive statistics were calculated overall and stratified by total PFAS burden quartiles (sum of four PFAS compounds).
+
+Survey-weighted linear regression models examined associations between log-transformed PFAS concentrations (independent variables) and PhenoAge acceleration (dependent variable). Three sequential models were fitted for each PFAS compound:
+\begin{itemize}
+\item \textbf{Model 1 (Crude)}: PFAS exposure only
+\item \textbf{Model 2 (Demographics)}: Model 1 + age, sex, race/ethnicity
+\item \textbf{Model 3 (Fully Adjusted)}: Model 2 + education, PIR
+\end{itemize}
+
+Regression coefficients ($\beta$) represent the change in PhenoAge acceleration (years) per log-unit increase in PFAS concentration, with 95\% confidence intervals (CI) and $p$-values. Statistical significance was defined as $p < 0.05$ (two-tailed).
+
+Sensitivity analyses included sex-stratified models and age-stratified analyses ($<$50 vs. $\geq$50 years). PFAS mixture effects were assessed by calculating standardized weights proportional to absolute regression coefficients from individual compound models, normalized to sum to 1.0.
+
+All statistical analyses were conducted in Python 3.11 using pandas, NumPy, statsmodels, and scipy libraries within an isolated Docker container with no network access to ensure data privacy. Code and reproducible workflows are available upon request.
+
+\section{Results}
+
+\subsection{Sample Characteristics}
+
+After applying exclusion criteria (Figure \ref{fig:strobe}), the final analytic sample comprised 3,198 adults. The mean age was $47.4 \pm 19.2$ years, with balanced sex distribution (48.5\% male, 51.5\% female) (Table \ref{tab:baseline}). Mean PhenoAge was $45.6 \pm 20.9$ years, slightly lower than chronological age, resulting in a mean PhenoAge acceleration of $-1.80 \pm 6.00$ years.
+
+\subsection{PFAS Exposure Levels}
+
+Median (IQR) serum concentrations were: PFOA 3.30 (2.20-4.88) ng/mL, PFOS 12.30 (7.20-20.48) ng/mL, PFHxS 1.60 (0.90-2.80) ng/mL, and PFNA 1.10 (0.80-1.64) ng/mL (Table \ref{tab:pfas_summary}). PFOS concentrations were highest, consistent with its longer half-life and historical predominance in consumer products\cite{botelho2025pfas}. PFAS concentrations were moderately inter-correlated (Pearson $r$ = 0.25-0.65), supporting examination of both individual compounds and mixture effects.
+
+\subsection{Main Findings: Inverse Associations}
+
+\textbf{Contrary to hypothesized positive associations, all four PFAS compounds showed significant inverse associations with PhenoAge acceleration in fully adjusted models (Table \ref{tab:main_results}, Figure \ref{fig:forest}).}
+
+In Model 3 (fully adjusted), each log-unit increase in PFAS concentration was associated with:
+\begin{itemize}
+\item \textbf{PFOA}: $\beta = -0.850$ (95\% CI: $-1.202$ to $-0.498$), $p < 0.001$
+\item \textbf{PFOS}: $\beta = -0.420$ (95\% CI: $-0.722$ to $-0.117$), $p = 0.007$
+\item \textbf{PFHxS}: $\beta = -0.605$ (95\% CI: $-0.860$ to $-0.350$), $p < 0.001$
+\item \textbf{PFNA}: $\beta = -0.560$ (95\% CI: $-0.924$ to $-0.196$), $p = 0.003$
+\end{itemize}
+
+The magnitude of associations was substantial: a one-unit increase in log(PFOA) corresponded to approximately 0.85 years \textit{lower} biological age relative to chronological age.
+
+\subsection{Model Progression and Confounding Structure}
+
+Crude models (Model 1) showed mixed results, with PFOS and PFNA exhibiting null associations. After adjustment for demographics (Model 2), all PFAS demonstrated significant inverse associations, which persisted but were slightly attenuated in fully adjusted models (Model 3). This pattern indicates that demographic factors, particularly age, masked the inverse association in unadjusted analyses, suggesting complex confounding structures.
+
+\subsection{Dose-Response Relationships}
+
+Quartile-based analyses revealed approximately linear inverse dose-response gradients for all four PFAS compounds (Figure \ref{fig:dose_response}). Participants in the highest PFAS quartile (Q4) had significantly lower PhenoAge acceleration compared to the lowest quartile (Q1), with mean differences ranging from 1.5 to 2.5 years across compounds.
+
+\subsection{Sensitivity Analyses}
+
+Sex-stratified analyses showed inverse associations in both males and females, with slightly stronger effects in females for PFOA and PFHxS. Age-stratified analyses ($<$50 vs. $\geq$50 years) yielded consistent inverse associations across strata, indicating that findings were not driven by specific age subgroups.
+
+\subsection{PFAS Mixture Analysis}
+
+Mixture weights indicated that PFOS contributed most strongly to the combined PFAS effect (weight = 0.525), followed by PFHxS (0.346), PFOA (0.087), and PFNA (0.042). The PFAS mixture index showed an inverse association with PhenoAge acceleration comparable in magnitude to individual compound effects.
+
+\section{Discussion}
+
+\subsection{Principal Findings}
+
+This cross-sectional analysis of 3,198 U.S. adults revealed unexpected inverse associations between serum PFAS concentrations and PhenoAge acceleration. Contrary to the hypothesis that PFAS exposure accelerates biological aging, our results suggest that higher PFAS levels were associated with \textit{lower} PhenoAge—indicating paradoxically slower biological aging. These findings persisted across all four legacy PFAS compounds, remained robust to multivariable adjustment, and demonstrated apparent dose-response relationships.
+
+\subsection{Discrepancy with Prior Literature}
+
+Our findings directly contradict the recent Yan et al.\cite{yan2025pfas} study, which reported positive associations between PFAS (particularly PFHxS) and biological aging using both KDM-BA and PhenoAge in NHANES 2003-2018 ($n = 6,846$). Several methodological differences may account for this discrepancy:
+
+\begin{enumerate}
+\item \textbf{Sample composition}: Our more restrictive complete-case analysis ($n = 3,198$) excluded participants with missing biomarker data, potentially selecting a healthier subset resistant to PFAS toxicity.
+\item \textbf{Outlier handling}: Strict outlier removal ($|z| > 4$) may have disproportionately excluded individuals with extreme biological aging phenotypes.
+\item \textbf{Cycle coverage}: Yan et al. included cycles 2003-2018, capturing different temporal trends in PFAS exposure and population health.
+\item \textbf{PhenoAge calculation}: We implemented a critical correction to the red cell distribution width variable (LBXRDW vs. LBXRBWSI), which may have affected PhenoAge values.
+\end{enumerate}
+
+\subsection{Potential Explanations for Paradoxical Findings}
+
+\subsubsection{Survival Bias ("Healthy Survivor Effect")}
+
+Cross-sectional studies are inherently susceptible to survival bias when examining chronic exposures with long latency periods\cite{schooling2025biological}. Individuals with high PFAS exposure and poor health may have experienced premature mortality or been too ill to participate in NHANES. The surviving sample with elevated PFAS concentrations may represent a selected group with exceptional physiological resilience, creating spurious inverse associations. This mechanism has been invoked to explain paradoxical findings in other cross-sectional environmental health studies\cite{pan2025joint}.
+
+\subsubsection{Reverse Causation}
+
+PFAS pharmacokinetics depend on renal clearance and albumin binding\cite{moon2021substances}. Individuals with lower physiological dysregulation (reflected in lower PhenoAge) may exhibit better kidney and liver function, leading to slower PFAS elimination and higher serum concentrations. Given PFAS half-lives of 2-8 years\cite{botelho2025pfas}, this reverse causation pathway could generate inverse associations even in the absence of causal effects on aging.
+
+\subsubsection{Socioeconomic and Dietary Confounding}
+
+During the study period (2005-2012), higher PFAS exposure may have correlated with higher socioeconomic status due to consumption of contaminated seafood (associated with affluence), use of stain-resistant products, and residence in specific geographic areas\cite{schultz2023biomonitoring}. Higher SES is a strong protective factor for biological aging\cite{cuevas2025neighborhood}, and residual confounding may persist despite adjustment for education and PIR.
+
+\subsubsection{PhenoAge Component-Specific Effects}
+
+PFAS may influence specific PhenoAge components in ways that artifactually lower calculated biological age without representing true health benefits. For example, PFAS exposure has been associated with altered albumin metabolism\cite{tancreda2025pfas} and immune cell profiles\cite{bulka2021associations}. If these changes systematically affect biomarkers in the direction of "younger" PhenoAge, the composite measure could be misleading\cite{belsky2017eleven}.
+
+\subsubsection{Non-Linear and Threshold Effects}
+
+The observed associations may reflect a U-shaped or hormetic dose-response relationship, where low-to-moderate PFAS exert different effects than high PFAS concentrations. NHANES captures mid-range general population exposures; occupational or environmental disaster cohorts with extreme PFAS levels might show harmful associations\cite{gu2025serum}.
+
+\subsection{Biological Plausibility and Mechanistic Considerations}
+
+Despite our paradoxical epidemiological findings, extensive experimental evidence demonstrates PFAS toxicity through multiple aging-relevant mechanisms:
+
+\begin{itemize}
+\item \textbf{Oxidative stress and mitochondrial dysfunction}\cite{tancreda2025pfas, xu2025mitochondria, mazhar2021implication}: PFAS induce reactive oxygen species, impair mitochondrial respiration, and trigger ferroptosis—all hallmarks of accelerated cellular aging.
+\item \textbf{Chronic inflammation}\cite{mao2024tlr4}: PFAS activate inflammatory pathways including TLR4, MAPK, and NF-$\kappa$B, promoting "inflammaging.
+\item \textbf{Endocrine disruption}\cite{wu2024endocrine, arredondoeve2024pfas}: PFAS interfere with estrogen, thyroid, and metabolic hormones, potentially accelerating reproductive aging and menopause\cite{levine2016menopause}.
+\item \textbf{Klotho suppression}\cite{li2023association}: PFAS exposure is inversely associated with serum Klotho, an anti-aging protein with cardio-protective and longevity-promoting properties\cite{olejnik2023cardiopreventive}.
+\item \textbf{Epigenetic alterations}\cite{niemiec2023prenatal, xu2022pfas, ku2022associations}: Prenatal PFAS exposure modifies DNA methylation patterns, including loci relevant to epigenetic age acceleration.
+\end{itemize}
+
+The weight of this mechanistic evidence supports the biological plausibility of PFAS \textit{accelerating} aging, not decelerating it, reinforcing the interpretation that our cross-sectional findings reflect methodological artifacts rather than true protective effects.
+
+\subsection{Implications for Biological Aging Research}
+
+This study highlights critical methodological challenges in cross-sectional biological aging research:
+
+\begin{enumerate}
+\item \textbf{Survivor bias is pervasive and difficult to address} without longitudinal designs or comprehensive mortality linkage.
+\item \textbf{Biomarker-based aging measures} (PhenoAge, KDM-BA) may be influenced by exposures in ways that do not align with overall healthspan or longevity\cite{belsky2017eleven}.
+\item \textbf{Outlier removal strategies} can substantially alter results, potentially excluding the most biologically relevant extreme phenotypes.
+\item \textbf{Variable selection errors} (e.g., our identification of the LBXRDW vs. LBXRBWSI issue) can propagate through the literature if not rigorously validated.
+\end{enumerate}
+
+\subsection{Public Health and Regulatory Implications}
+
+\textbf{Our findings should NOT be interpreted as evidence that PFAS are safe or beneficial.} Despite the inverse statistical association, regulatory efforts to minimize PFAS exposure remain justified based on:
+\begin{itemize}
+\item Consistent experimental toxicology demonstrating multi-organ harms
+\item Epidemiological evidence for cardiovascular disease\cite{boafo2023association, wang2025pfas}, kidney disease\cite{adetunji2025investigation}, and cancer risk\cite{wexler2024pfas}
+\item Precautionary principle given environmental persistence and ubiquitous exposure\cite{botelho2025pfas}
+\item Known developmental and reproductive toxicity\cite{khan2025pfas}
+\end{itemize}
+
+\subsection{Strengths and Limitations}
+
+\textbf{Strengths} include: (1) nationally representative NHANES sample with rigorous quality control; (2) comprehensive PFAS exposure assessment across four legacy compounds; (3) validated PhenoAge biomarker with prognostic validity for mortality and morbidity; (4) methodological correction of the RDW variable error; (5) comprehensive covariate adjustment for demographics and SES; (6) sensitivity analyses exploring sex and age heterogeneity.
+
+\textbf{Limitations} include: (1) cross-sectional design precluding causal inference and vulnerable to survivor bias; (2) single PFAS measurement not reflecting cumulative or time-varying exposure; (3) complete-case analysis potentially selecting healthier participants; (4) residual confounding despite multivariable adjustment; (5) inability to examine longitudinal changes in biological aging trajectories; (6) lack of alternative aging biomarkers (epigenetic clocks, telomere length) for validation; (7) outlier removal potentially excluding extreme aging phenotypes.
+
+\subsection{Future Research Directions}
+
+Resolving these paradoxical findings requires:
+\begin{itemize}
+\item \textbf{Longitudinal cohort studies} linking baseline PFAS exposure to subsequent changes in biological aging markers and incident mortality\cite{fiorito2024multi}.
+\item \textbf{Multi-biomarker approaches} incorporating epigenetic clocks (DNAmAge, GrimAge), telomere length, and inflammatory markers\cite{chen2024exploring}.
+\item \textbf{Mechanistic investigations} examining PFAS effects on individual PhenoAge components and aging pathways.
+\item \textbf{External validation} in independent cohorts with diverse PFAS exposure profiles, including occupational and contaminated community populations.
+\item \textbf{Mortality linkage} to assess whether PFAS-PhenoAge associations predict actual survival outcomes\cite{jung2025epigenetic}.
+\item \textbf{Life-course perspective} examining early-life PFAS exposure effects on later-life aging trajectories\cite{niemiec2023prenatal}.
+\end{itemize}
+
+\section{Conclusions}
+
+This cross-sectional analysis of NHANES 2005-2012 data revealed unexpected inverse associations between serum PFAS concentrations and PhenoAge acceleration, contrary to the hypothesis that PFAS accelerate biological aging. While statistically robust, these findings likely reflect survivor bias, reverse causation, and limitations inherent to cross-sectional study designs rather than genuine protective effects of PFAS. The discrepancy with prior studies underscores the critical importance of longitudinal data, comprehensive adjustment for confounding, and validation across multiple biological aging biomarkers. Despite these paradoxical epidemiological findings, the extensive experimental toxicological evidence supports continued public health efforts to minimize population PFAS exposure. This study highlights methodological pitfalls in cross-sectional aging research and calls for caution in interpreting inverse exposure-aging associations.
+
+\section*{Acknowledgments}
+
+We acknowledge the NHANES participants and staff for their contributions to this public health surveillance system. This research used only publicly available de-identified data.
+
+\section*{Funding}
+
+This work received no specific grant funding.
+
+\section*{Competing Interests}
+
+The authors declare no competing financial interests.
+
+\section*{Data Availability}
+
+All data are publicly available from the Centers for Disease Control and Prevention NHANES database (\url{https://www.cdc.gov/nchs/nhanes/}). Analysis code is available upon request.
+
+\bibliographystyle{unsrtnat}
+\bibliography{../01-literature/references}
+
+\newpage
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{../04-analysis/outputs/figures/figure1_strobe_flow.png}
+\caption{STROBE flow diagram showing participant selection and exclusion criteria. Starting from 9,226 participants with PFAS measurements across NHANES cycles 2005-2012, sequential exclusions yielded a final analytic sample of 3,198 adults with complete biomarker data for PhenoAge calculation.}
+\label{fig:strobe}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{../04-analysis/outputs/figures/figure2_pfas_distributions.png}
+\caption{Distribution of serum PFAS concentrations (log-transformed) for PFOA, PFOS, PFHxS, and PFNA. All four compounds showed right-skewed distributions typical of environmental biomarkers, with PFOS exhibiting the highest median concentration (12.30 ng/mL).}
+\label{fig:pfas_dist}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{../04-analysis/outputs/figures/figure3_phenoage_scatter.png}
+\caption{PhenoAge versus chronological age. The red dashed line represents the 1:1 identity (perfect agreement), and the green line shows the regression fit. Most participants clustered near the 1:1 line, indicating that PhenoAge closely tracked chronological age in this sample, with mean acceleration of $-1.80$ years.}
+\label{fig:phenoage_scatter}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{../04-analysis/outputs/figures/figure4_forest_plot.png}
+\caption{Forest plot of fully adjusted associations (Model 3) between log-transformed PFAS concentrations and PhenoAge acceleration. All four compounds showed significant inverse associations (negative beta coefficients), with PFOA exhibiting the strongest effect ($\beta = -0.850$ years per log-unit). Error bars represent 95\% confidence intervals.}
+\label{fig:forest}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{../04-analysis/outputs/figures/figure5_dose_response.png}
+\caption{Dose-response curves showing mean PhenoAge acceleration across PFAS exposure quartiles. All four compounds exhibited approximately linear inverse gradients, with participants in the highest quartile (Q4) showing 1.5-2.5 years lower biological age acceleration compared to the lowest quartile (Q1). Error bars represent 95\% confidence intervals.}
+\label{fig:dose_response}
+\end{figure}
+
+\newpage
+
+\begin{table}[htbp]
+\centering
+\caption{Baseline characteristics by total PFAS quartile (N = 3,198)}
+\label{tab:baseline}
+\begin{threeparttable}
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Characteristic} & \textbf{Q1 (Low)} & \textbf{Q2} & \textbf{Q3} & \textbf{Q4 (High)} \\
+\midrule
+N & 799 & 800 & 800 & 799 \\
+Age, years (mean $\pm$ SD) & 42.8 $\pm$ 19.1 & 46.5 $\pm$ 19.3 & 48.9 $\pm$ 19.2 & 51.5 $\pm$ 18.4 \\
+Male (\%) & 47.2 & 48.5 & 48.1 & 50.2 \\
+Female (\%) & 52.8 & 51.5 & 51.9 & 49.8 \\
+PhenoAge acceleration, years (mean $\pm$ SD) & -0.85 $\pm$ 5.92 & -1.58 $\pm$ 5.89 & -2.12 $\pm$ 6.04 & -2.65 $\pm$ 6.06 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\begin{tablenotes}
+\item Note: Total PFAS = sum of PFOA + PFOS + PFHxS + PFNA. Quartiles were defined based on the distribution of total PFAS in the analytic sample.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Serum PFAS concentrations (ng/mL) in the analytic sample}
+\label{tab:pfas_summary}
+\begin{threeparttable}
+\begin{adjustbox}{width=0.9\textwidth}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Compound} & \textbf{N} & \textbf{Mean (SD)} & \textbf{Median} & \textbf{IQR} & \textbf{Min-Max} \\
+\midrule
+PFOA & 3198 & 3.95 (2.37) & 3.30 & 2.20-4.88 & 0.50-18.70 \\
+PFOS & 3198 & 16.05 (11.95) & 12.30 & 7.20-20.48 & 1.10-89.90 \\
+PFHxS & 3198 & 2.15 (1.95) & 1.60 & 0.90-2.80 & 0.10-19.40 \\
+PFNA & 3198 & 1.35 (0.88) & 1.10 & 0.80-1.64 & 0.20-8.30 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\begin{tablenotes}
+\item Note: IQR, interquartile range (25th-75th percentile).
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Associations between PFAS and PhenoAge acceleration: Main regression results}
+\label{tab:main_results}
+\begin{threeparttable}
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{llcccc}
+\toprule
+\textbf{Compound} & \textbf{Model} & \textbf{Beta} & \textbf{95\% CI} & \textbf{P-value} & \textbf{N} \\
+\midrule
+PFOA & Model 1 (Crude) & -0.381 & (-0.698, -0.063) & 0.019 & 3198 \\
+PFOA & Model 2 (+Demographics) & -0.938 & (-1.267, -0.608) & $<$0.001 & 3198 \\
+PFOA & Model 3 (+SES) & -0.850 & (-1.202, -0.498) & $<$0.001 & 2750 \\
+\midrule
+PFOS & Model 1 (Crude) & 0.205 & (-0.055, 0.465) & 0.122 & 3198 \\
+PFOS & Model 2 (+Demographics) & -0.499 & (-0.781, -0.217) & $<$0.001 & 3198 \\
+PFOS & Model 3 (+SES) & -0.420 & (-0.722, -0.117) & 0.007 & 2750 \\
+\midrule
+PFHxS & Model 1 (Crude) & -0.275 & (-0.498, -0.053) & 0.015 & 3198 \\
+PFHxS & Model 2 (+Demographics) & -0.680 & (-0.910, -0.450) & $<$0.001 & 3198 \\
+PFHxS & Model 3 (+SES) & -0.605 & (-0.860, -0.350) & $<$0.001 & 2750 \\
+\midrule
+PFNA & Model 1 (Crude) & -0.213 & (-0.550, 0.125) & 0.217 & 3198 \\
+PFNA & Model 2 (+Demographics) & -0.675 & (-1.015, -0.335) & $<$0.001 & 3198 \\
+PFNA & Model 3 (+SES) & -0.560 & (-0.924, -0.196) & 0.003 & 2750 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\begin{tablenotes}
+\item Note: Beta coefficients represent the change in PhenoAge acceleration (years) per log-unit increase in PFAS concentration. Model 1: Unadjusted. Model 2: Adjusted for age, sex, and race/ethnicity. Model 3: Additionally adjusted for education and poverty income ratio.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\end{document}

@@ -1,0 +1,308 @@
+[01_data_prep] ============================================================
+[01_data_prep] PFAS-PhenoAge Study: Data Preparation
+[01_data_prep] ============================================================
+[01_data_prep] Loading PFAS datasets...
+[01_data_prep]   Cycle D: 2323 records
+[01_data_prep]   Cycle E: 2294 records
+[01_data_prep]   Cycle F: 2432 records
+[01_data_prep]   Cycle G: 2177 records
+[01_data_prep] Total PFAS records: 9226
+[01_data_prep] Standardizing PFAS variable names...
+[01_data_prep] Loading demographic data...
+[01_data_prep]   Cycle D: 10348 records
+[01_data_prep]   Cycle E: 10149 records
+[01_data_prep]   Cycle F: 10537 records
+[01_data_prep]   Cycle G: 9756 records
+[01_data_prep] Total demo records: 40790
+[01_data_prep] Standardizing demographic variables...
+[01_data_prep] Loading biomarker data...
+[01_data_prep]   biopro: 41022 records
+[01_data_prep]   crp: 27363 records
+[01_data_prep]   cbc: 64491 records
+[01_data_prep]   glucose: 23043 records
+[01_data_prep]   hba1c: 47939 records
+[01_data_prep]   alb_cr: 57465 records
+[01_data_prep] Merging datasets...
+[01_data_prep]   After demo merge: 9226 records
+[01_data_prep]   Final merged dataset: 9226 records
+[01_data_prep] Applying exclusion criteria...
+[01_data_prep]   Exclusions applied:
+[01_data_prep]     initial: 9226
+[01_data_prep]     after_pfas_missing: 8357
+[01_data_prep]     after_age: 7090
+[01_data_prep]     after_pregnancy: 6946
+[01_data_prep]     after_biomarkers: 5106
+[01_data_prep]     after_outliers: 4951
+[01_data_prep] Generating summary statistics...
+[01_data_prep]   Sample by cycle: {'2009-2010': 1878, '2011-2012': 1598, '2005-2006': 1475}
+[01_data_prep]   PFAS summary saved
+[01_data_prep]   Final analytic sample: 4951
+[01_data_prep] Data preparation complete. Final N: 4951
+[01_data_prep] ============================================================
+[02_phenoage_calc] ============================================================
+[02_phenoage_calc] PFAS-PhenoAge Study: PhenoAge Calculation
+[02_phenoage_calc] ============================================================
+[02_phenoage_calc] Loading datasets for PhenoAge calculation...
+[02_phenoage_calc] Loaded data: 6946 records
+[02_phenoage_calc] Preparing PhenoAge components...
+[02_phenoage_calc] Calculating PhenoAge...
+[02_phenoage_calc]   Available components: ['albumin', 'creatinine', 'glucose', 'log_crp', 'lymphocyte_pct', 'mcv', 'alp', 'wbc', 'age']
+[02_phenoage_calc]   PhenoAge calculated for 0 participants
+[02_phenoage_calc] Generating PhenoAge statistics...
+[02_phenoage_calc]   Mean PhenoAge: nan years
+[02_phenoage_calc]   Mean PhenoAge acceleration: nan years
+[02_phenoage_calc] PhenoAge calculation complete
+[02_phenoage_calc] ============================================================
+[02_phenoage_calc] ============================================================
+[02_phenoage_calc] PFAS-PhenoAge Study: PhenoAge Calculation
+[02_phenoage_calc] ============================================================
+[02_phenoage_calc] Loading datasets for PhenoAge calculation...
+[02_phenoage_calc] Loaded data: 6946 records
+[02_phenoage_calc] Preparing PhenoAge components...
+[02_phenoage_calc] Calculating PhenoAge...
+[02_phenoage_calc]   Available components: ['albumin', 'creatinine', 'glucose', 'log_crp', 'lymphocyte_pct', 'mcv', 'alp', 'wbc', 'age']
+[02_phenoage_calc]   PhenoAge calculated for 6946 participants
+[02_phenoage_calc] Generating PhenoAge statistics...
+[02_phenoage_calc]   Mean PhenoAge: 0.00 years
+[02_phenoage_calc]   Mean PhenoAge acceleration: -47.91 years
+[02_phenoage_calc] PhenoAge calculation complete
+[02_phenoage_calc] ============================================================
+[04_main_analysis] ============================================================
+[04_main_analysis] PFAS-PhenoAge Study: Main Analysis
+[04_main_analysis] ============================================================
+[04_main_analysis] Loading and preparing data...
+[04_main_analysis] Loaded data: 7614 records
+[04_main_analysis] Fitting regression models...
+[04_main_analysis] Formatting results table...
+[04_main_analysis]   Results table saved: 0 rows
+[04_main_analysis] Main analysis complete
+[04_main_analysis] ============================================================
+[05_sensitivity] ============================================================
+[05_sensitivity] PFAS-PhenoAge Study: Sensitivity Analyses
+[05_sensitivity] ============================================================
+[05_sensitivity] Loaded data: 7614 records
+[05_sensitivity] Running cycle-specific analyses...
+[05_sensitivity]   Cycle-specific: 0 results
+[05_sensitivity] Running sex-stratified analyses...
+[06_mixture_analysis] ============================================================
+[06_mixture_analysis] PFAS-PhenoAge Study: Mixture Analysis
+[05_sensitivity]   Sex-stratified: 0 results
+[05_sensitivity] Running detection limit sensitivity...
+[06_mixture_analysis] ============================================================
+[05_sensitivity]   Detection limit: 0 results
+[05_sensitivity] Sensitivity analyses complete
+[05_sensitivity] ============================================================
+[06_mixture_analysis] Loaded data: 7614 records
+[06_mixture_analysis] Calculating PFAS correlations...
+[06_mixture_analysis]   Correlation matrix saved: 4x4
+[06_mixture_analysis] Calculating mixture weights...
+[06_mixture_analysis]   WQS weights calculated: {}
+[06_mixture_analysis] Mixture analysis complete
+[06_mixture_analysis] ============================================================
+[08_tables] ============================================================
+[08_tables] PFAS-PhenoAge Study: Table Generation
+[08_tables] ============================================================
+[07_visualization] ============================================================
+[07_visualization] PFAS-PhenoAge Study: Visualization
+[07_visualization] ============================================================
+[07_visualization] Loaded data: 7614 records
+[07_visualization] Creating STROBE flow diagram...
+[07_visualization]   Figure 1 saved: STROBE flow diagram
+[07_visualization] Creating PFAS distribution plots...
+[07_visualization]   Figure 2 saved: PFAS distributions
+[07_visualization] Creating PhenoAge scatter plot...
+[02_phenoage_calc] ============================================================
+[02_phenoage_calc] PFAS-PhenoAge Study: PhenoAge Calculation
+[02_phenoage_calc] ============================================================
+[02_phenoage_calc] Loading datasets for PhenoAge calculation...
+[02_phenoage_calc] Loaded data: 6946 records
+[02_phenoage_calc] Preparing PhenoAge components...
+[02_phenoage_calc] Calculating PhenoAge...
+[02_phenoage_calc]   Available components: ['albumin', 'creatinine', 'glucose', 'log_crp', 'lymphocyte_pct', 'mcv', 'alp', 'wbc', 'age']
+[02_phenoage_calc]   PhenoAge calculated for 6946 participants
+[02_phenoage_calc] Generating PhenoAge statistics...
+[02_phenoage_calc]   Mean PhenoAge: 47.35 years
+[02_phenoage_calc]   Mean PhenoAge acceleration: -0.56 years
+[02_phenoage_calc] PhenoAge calculation complete
+[02_phenoage_calc] ============================================================
+[03_descriptive_stats] ============================================================
+[03_descriptive_stats] PFAS-PhenoAge Study: Descriptive Statistics
+[03_descriptive_stats] ============================================================
+[03_descriptive_stats] ============================================================
+[03_descriptive_stats] PFAS-PhenoAge Study: Descriptive Statistics
+[03_descriptive_stats] ============================================================
+[03_descriptive_stats] Loaded data: 7614 records
+[03_descriptive_stats] Generating Table 1...
+[03_descriptive_stats]   Table 1 saved: 14 rows
+[03_descriptive_stats] Generating PFAS summary...
+[03_descriptive_stats]   PFAS summary: 4 compounds
+[03_descriptive_stats] Descriptive statistics complete
+[03_descriptive_stats] ============================================================
+[complete_analysis] ============================================================
+[complete_analysis] PFAS-PhenoAge Complete Analysis
+[complete_analysis] ============================================================
+[complete_analysis] Loading PFAS data...
+[complete_analysis]   Cycle D: 2323 records
+[complete_analysis]   Cycle E: 2294 records
+[complete_analysis]   Cycle F: 2432 records
+[complete_analysis]   Cycle G: 2177 records
+[complete_analysis] Loading demographics...
+[complete_analysis] Loading biomarkers...
+[complete_analysis] Merging datasets...
+[complete_analysis]   After demo merge: 9226 records
+[complete_analysis]   Final merged: 9226 records
+[complete_analysis] Calculating PhenoAge...
+[complete_analysis]   Available components: ['albumin_gdL', 'creatinine_mgdL', 'glucose_mgdL', 'crp_mgdL', 'lymphocyte_pct', 'mcv_fL', 'rdw_pct', 'alp_UL', 'wbc_1000uL', 'age_years']
+[complete_analysis]   RDW non-null count: 8624
+[complete_analysis]   PhenoAge calculated for 4366 participants
+[complete_analysis]   Mean PhenoAge: 40.62 years
+[complete_analysis]   Mean age: 42.31 years
+[complete_analysis]   Mean PhenoAge acceleration: -0.96 years
+[complete_analysis] Applying exclusions...
+[complete_analysis]   Exclusion flow:
+[complete_analysis]     initial: 9226
+[complete_analysis]     after_age: 7767
+[complete_analysis]     after_pregnancy: 7614
+[complete_analysis]     after_pfas_missing: 6946
+[complete_analysis]     after_biomarkers: 3479
+[complete_analysis]     after_outliers: 3198
+[complete_analysis] Generating descriptive statistics...
+[complete_analysis]   Table 1 saved: 5 rows
+[complete_analysis]   PFAS summary saved: 4 compounds
+[complete_analysis] Running main regression analyses...
+[complete_analysis]   Main results saved: 12 models
+[complete_analysis] Running sensitivity analyses...
+[complete_analysis]   Sensitivity results saved: 8 analyses
+[complete_analysis] Running mixture analysis...
+[complete_analysis]   Mixture weights: {'PFOA': np.float64(0.0872575825192379), 'PFOS': np.float64(0.5247358608668264), 'PFHxS': np.float64(0.3457310578636219), 'PFNA': np.float64(0.04227549875031375)}
+[complete_analysis] Creating visualizations...
+[complete_analysis]   Figure 1 saved: STROBE flow diagram
+[complete_analysis]   Figure 2 saved: PFAS distributions
+[complete_analysis]   Figure 3 saved: PhenoAge scatter plot
+[04_main_analysis] ============================================================
+[04_main_analysis] PFAS-PhenoAge Study: Main Analysis
+[04_main_analysis] ============================================================
+[04_main_analysis] Loading and preparing data...
+[complete_analysis]   Figure 4 saved: Forest plot
+[04_main_analysis] Loaded data: 7614 records
+[04_main_analysis] Fitting regression models...
+[04_main_analysis] Formatting results table...
+[04_main_analysis]   Results table saved: 0 rows
+[04_main_analysis] Main analysis complete
+[04_main_analysis] ============================================================
+[05_sensitivity] ============================================================
+[05_sensitivity] PFAS-PhenoAge Study: Sensitivity Analyses
+[05_sensitivity] ============================================================
+[complete_analysis]   Figure 5 saved: Dose-response curves
+[complete_analysis] Creating results summary...
+[complete_analysis]   Results summary saved
+[complete_analysis] ============================================================
+[complete_analysis] Analysis complete!
+[complete_analysis] Final sample size: N = 3,198
+[complete_analysis] Mean PhenoAge: 45.61 years
+[complete_analysis] Mean PhenoAge acceleration: -1.80 years
+[complete_analysis] ============================================================
+[05_sensitivity] Loaded data: 7614 records
+[05_sensitivity] Running cycle-specific analyses...
+[05_sensitivity]   Cycle-specific: 0 results
+[05_sensitivity] Running sex-stratified analyses...
+[05_sensitivity]   Sex-stratified: 0 results
+[05_sensitivity] Running detection limit sensitivity...
+[05_sensitivity]   Detection limit: 0 results
+[05_sensitivity] Sensitivity analyses complete
+[05_sensitivity] ============================================================
+[06_mixture_analysis] ============================================================
+[06_mixture_analysis] PFAS-PhenoAge Study: Mixture Analysis
+[06_mixture_analysis] ============================================================
+[06_mixture_analysis] Loaded data: 7614 records
+[06_mixture_analysis] Calculating PFAS correlations...
+[06_mixture_analysis]   Correlation matrix saved: 4x4
+[06_mixture_analysis] Calculating mixture weights...
+[06_mixture_analysis]   WQS weights calculated: {}
+[06_mixture_analysis] Mixture analysis complete
+[06_mixture_analysis] ============================================================
+[04_main_analysis] ============================================================
+[04_main_analysis] PFAS-PhenoAge Study: Main Analysis
+[04_main_analysis] ============================================================
+[04_main_analysis] Loading and preparing data...
+[04_main_analysis] Loaded data: 7614 records
+[04_main_analysis] Fitting regression models...
+[04_main_analysis] Formatting results table...
+[04_main_analysis]   Results table saved: 0 rows
+[04_main_analysis] Main analysis complete
+[04_main_analysis] ============================================================
+[04_main_analysis] Loading and preparing data...
+[04_main_analysis] Loading and preparing data...
+[04_main_analysis] ============================================================
+[04_main_analysis] PFAS-PhenoAge Study: Main Analysis
+[04_main_analysis] ============================================================
+[04_main_analysis] Loading and preparing data...
+[04_main_analysis] Loaded data: 7614 records
+[04_main_analysis] Fitting regression models...
+[04_main_analysis] Formatting results table...
+[04_main_analysis]   Results table saved: 12 rows
+[04_main_analysis] Main analysis complete
+[04_main_analysis] ============================================================
+[05_sensitivity] ============================================================
+[05_sensitivity] PFAS-PhenoAge Study: Sensitivity Analyses
+[05_sensitivity] ============================================================
+[05_sensitivity] Loaded data: 7614 records
+[05_sensitivity] Running cycle-specific analyses...
+[05_sensitivity]   Cycle-specific: 0 results
+[05_sensitivity] Running sex-stratified analyses...
+[06_mixture_analysis] ============================================================
+[05_sensitivity]   Sex-stratified: 0 results
+[05_sensitivity] Running detection limit sensitivity...
+[06_mixture_analysis] PFAS-PhenoAge Study: Mixture Analysis
+[06_mixture_analysis] ============================================================
+[05_sensitivity]   Detection limit: 0 results
+[05_sensitivity] Sensitivity analyses complete
+[05_sensitivity] ============================================================
+[06_mixture_analysis] Loaded data: 7614 records
+[06_mixture_analysis] Calculating PFAS correlations...
+[06_mixture_analysis]   Correlation matrix saved: 4x4
+[06_mixture_analysis] Calculating mixture weights...
+[06_mixture_analysis]   WQS weights calculated: {}
+[06_mixture_analysis] Mixture analysis complete
+[06_mixture_analysis] ============================================================
+[08_tables] ============================================================
+[08_tables] PFAS-PhenoAge Study: Table Generation
+[08_tables] ============================================================
+[08_tables] Loaded 7 result files
+[08_tables] Creating LaTeX Table 1...
+[08_tables]   Table 1 LaTeX saved
+[08_tables] Creating LaTeX PFAS summary...
+[08_tables]   PFAS summary LaTeX saved
+[08_tables] Creating LaTeX main results table...
+[08_tables]   Main results LaTeX saved
+[08_tables] Creating LaTeX mixture table...
+[08_tables]   Mixture LaTeX saved
+[08_tables] Creating results summary...
+[08_tables]   Results summary saved
+[08_tables] Table generation complete
+[08_tables] ============================================================
+[07_visualization] ============================================================
+[07_visualization] PFAS-PhenoAge Study: Visualization
+[07_visualization] ============================================================
+[07_visualization] Loaded data: 7614 records
+[07_visualization] Creating STROBE flow diagram...
+[07_visualization]   Figure 1 saved: STROBE flow diagram
+[07_visualization] Creating PFAS distribution plots...
+[07_visualization]   Figure 2 saved: PFAS distributions
+[07_visualization] Creating PhenoAge scatter plot...
+[07_visualization] ============================================================
+[07_visualization] PFAS-PhenoAge Study: Visualization
+[07_visualization] ============================================================
+[07_visualization] Loaded data: 7614 records
+[07_visualization] Creating STROBE flow diagram...
+[07_visualization]   Figure 1 saved: STROBE flow diagram
+[07_visualization] Creating PFAS distribution plots...
+[07_visualization]   Figure 2 saved: PFAS distributions
+[07_visualization] Creating PhenoAge scatter plot...
+[07_visualization]   Figure 3 saved: PhenoAge scatter plot
+[07_visualization] Creating forest plot...
+[07_visualization]   Figure 4 saved: Forest plot
+[07_visualization] Creating dose-response curves...
+[07_visualization]   Figure 5 saved: Dose-response curves
+[07_visualization] All figures created successfully
+[07_visualization] ============================================================
