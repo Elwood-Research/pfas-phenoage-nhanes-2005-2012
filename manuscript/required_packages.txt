@@ -1,0 +1,40 @@
+% Essential LaTeX packages for PFAS-PhenoAge manuscript
+
+% Font and encoding
+inputenc
+fontenc
+lmodern
+times
+
+% Page layout
+geometry
+
+% Graphics and figures
+graphicx
+float
+adjustbox
+caption
+subcaption
+
+% Tables
+booktabs
+array
+longtable
+multirow
+threeparttable
+
+% Math
+amsmath
+amssymb
+
+% Bibliography and citations
+natbib
+
+% Links and references
+hyperref
+
+% Line numbering (optional for review)
+lineno
+
+% Spacing
+setspace

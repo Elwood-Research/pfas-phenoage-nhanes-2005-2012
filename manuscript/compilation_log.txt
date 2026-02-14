@@ -1,0 +1,60 @@
+MANUSCRIPT COMPILATION LOG
+==========================
+Date: February 13, 2026
+Study: PFAS-PhenoAge Association Study
+
+COMPILATION PROCESS:
+-------------------
+1. First pdflatex pass: COMPLETED
+2. BibTeX pass: COMPLETED (with warnings - see below)
+3. Second pdflatex pass: COMPLETED
+4. Third pdflatex pass: COMPLETED
+
+OUTPUT:
+-------
+- manuscript.pdf: 17 pages (1,690,978 bytes)
+- All figures included successfully (5 figures)
+- All tables included successfully (4 tables)
+
+COMPILATION WARNINGS:
+--------------------
+BibTeX reported 39 missing citations. The following citation keys are referenced
+in the manuscript but not found in references.bib:
+
+Missing citations:
+- xu2025mitochondria
+- li2023association
+- belsky2017eleven
+- cuevas2025neighborhood
+- schooling2025biological
+- pan2025joint
+- moon2021substances
+- schultz2023biomonitoring
+- mazhar2021implication
+- levine2016menopause
+- olejnik2023cardiopreventive
+- xu2022pfas (exists as Xu2022 - case mismatch)
+- ku2022associations
+- wexler2024pfas
+- khan2025pfas
+- fiorito2024multi
+- chen2024exploring
+- jung2025epigenetic
+- And 21 additional missing citations
+
+STATUS:
+-------
+PDF compilation: SUCCESSFUL
+Bibliography: PARTIALLY COMPLETE (39 missing citations)
+Figures: ALL PRESENT (5/5)
+Tables: ALL PRESENT (4/4)
+
+NEXT STEPS REQUIRED:
+-------------------
+1. Add missing citations to references.bib OR
+2. Remove/replace citations in manuscript text OR
+3. Accept manuscript with [?] placeholders for missing citations
+
+The PDF is viewable and all content is present, but citations appear as [?]
+where references are missing.
+

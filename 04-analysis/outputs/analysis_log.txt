@@ -306,3 +306,54 @@
 [07_visualization]   Figure 5 saved: Dose-response curves
 [07_visualization] All figures created successfully
 [07_visualization] ============================================================
+[complete_analysis] ============================================================
+[complete_analysis] PFAS-PhenoAge Complete Analysis
+[complete_analysis] ============================================================
+[complete_analysis] Loading PFAS data...
+[complete_analysis]   Cycle D: 2323 records
+[complete_analysis]   Cycle E: 2294 records
+[complete_analysis]   Cycle F: 2432 records
+[complete_analysis]   Cycle G: 2177 records
+[complete_analysis] Loading demographics...
+[complete_analysis] Loading biomarkers...
+[complete_analysis] Merging datasets...
+[complete_analysis]   After demo merge: 9226 records
+[complete_analysis]   Final merged: 9226 records
+[complete_analysis] Calculating PhenoAge...
+[complete_analysis]   Available components: ['albumin_gdL', 'creatinine_mgdL', 'glucose_mgdL', 'crp_mgdL', 'lymphocyte_pct', 'mcv_fL', 'rdw_pct', 'alp_UL', 'wbc_1000uL', 'age_years']
+[complete_analysis]   RDW non-null count: 8624
+[complete_analysis]   PhenoAge calculated for 4366 participants
+[complete_analysis]   Mean PhenoAge: 40.62 years
+[complete_analysis]   Mean age: 42.31 years
+[complete_analysis]   Mean PhenoAge acceleration: -0.96 years
+[complete_analysis] Applying exclusions...
+[complete_analysis]   Exclusion flow:
+[complete_analysis]     initial: 9226
+[complete_analysis]     after_age: 7767
+[complete_analysis]     after_pregnancy: 7614
+[complete_analysis]     after_pfas_missing: 6946
+[complete_analysis]     after_biomarkers: 3479
+[complete_analysis]     after_outliers: 3198
+[complete_analysis] Generating descriptive statistics...
+[complete_analysis]   Table 1 saved: 5 rows
+[complete_analysis]   PFAS summary saved: 4 compounds
+[complete_analysis] Running main regression analyses...
+[complete_analysis]   Main results saved: 12 models
+[complete_analysis] Running sensitivity analyses...
+[complete_analysis]   Sensitivity results saved: 8 analyses
+[complete_analysis] Running mixture analysis...
+[complete_analysis]   Mixture weights: {'PFOA': np.float64(0.0872575825192379), 'PFOS': np.float64(0.5247358608668264), 'PFHxS': np.float64(0.3457310578636219), 'PFNA': np.float64(0.04227549875031375)}
+[complete_analysis] Creating visualizations...
+[complete_analysis]   Figure 1 saved: STROBE flow diagram
+[complete_analysis]   Figure 2 saved: PFAS distributions
+[complete_analysis]   Figure 3 saved: PhenoAge scatter plot
+[complete_analysis]   Figure 4 saved: Forest plot
+[complete_analysis]   Figure 5 saved: Dose-response curves
+[complete_analysis] Creating results summary...
+[complete_analysis]   Results summary saved
+[complete_analysis] ============================================================
+[complete_analysis] Analysis complete!
+[complete_analysis] Final sample size: N = 3,198
+[complete_analysis] Mean PhenoAge: 45.61 years
+[complete_analysis] Mean PhenoAge acceleration: -1.80 years
+[complete_analysis] ============================================================

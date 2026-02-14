@@ -1,0 +1,48 @@
+Variable Domain,Study Variable Name,NHANES Variable Name,NHANES Dataset,Description,Units,Required for,Available Cycles,Notes
+EXPOSURE,pfoa_ng_ml,LBXPFOA,PFC/SSPFC,Perfluorooctanoic acid,ng/mL,Primary exposure,A D E F G,LOD varies by cycle
+EXPOSURE,pfos_ng_ml,LBXPFOS,PFC/SSPFC,Perfluorooctane sulfonic acid,ng/mL,Primary exposure,A D E F G,LOD varies by cycle
+EXPOSURE,pfhxs_ng_ml,LBXPFHS,PFC/SSPFC,Perfluorohexane sulfonic acid,ng/mL,Primary exposure,A D E F G,LOD varies by cycle
+EXPOSURE,pfna_ng_ml,LBXPFNA,PFC,Perfluorononanoic acid,ng/mL,Primary exposure,D E F G,Not available in cycle A
+EXPOSURE,ln_pfoa,LBXPFOA,PFC/SSPFC,Natural log PFOA,ln(ng/mL),Analysis,A D E F G,Transformed
+EXPOSURE,ln_pfos,LBXPFOS,PFC/SSPFC,Natural log PFOS,ln(ng/mL),Analysis,A D E F G,Transformed
+EXPOSURE,ln_pfhxs,LBXPFHS,PFC/SSPFC,Natural log PFHxS,ln(ng/mL),Analysis,A D E F G,Transformed
+EXPOSURE,ln_pfna,LBXPFNA,PFC,Natural log PFNA,ln(ng/mL),Analysis,D E F G,Transformed
+EXPOSURE,pfas_sum_molar,Calculated,PFC/SSPFC,Sum of molar PFAS concentrations,nmol/L,Mixture analysis,A D E F G,Derived
+EXPOSURE,pfas_pc1,Calculated,PFC/SSPFC,First principal component,Standardized,Mixture analysis,A D E F G,Derived from PCA
+OUTCOME,albumin_gl,LBDSALSI,BIOPRO/LAB18,Serum albumin,g/L,PhenoAge,A D E F G,SI units preferred
+OUTCOME,creatinine_umol_l,LBDSCRSI,BIOPRO/LAB18,Serum creatinine,μmol/L,PhenoAge,A D E F G,SI units preferred
+OUTCOME,glucose_mmol_l,LBDGLUSI,GLU/LAB18,Fasting plasma glucose,mmol/L,PhenoAge,A D E F G,SI units preferred
+OUTCOME,ln_crp_mg_l,LBXCRP,CRP,C-reactive protein (log),ln(mg/L),PhenoAge,D E F,Log-transformed; Not in cycle A
+OUTCOME,lymphocyte_pct,LBXLYPCT,CBC,Lymphocyte percentage,%,PhenoAge,D E F G,Not confirmed for cycle A
+OUTCOME,mcv_fl,LBXMCVSI,CBC,Mean corpuscular volume,fL,PhenoAge,D E F G,Not confirmed for cycle A
+OUTCOME,rdw_pct,LBXRDW,CBC,Red cell distribution width,%,PhenoAge,D E F G,Critical PhenoAge component
+OUTCOME,alp_ul,LBXSAPSI,BIOPRO/LAB18,Alkaline phosphatase,U/L,PhenoAge,A D E F G,Available all cycles
+OUTCOME,wbc_10e9_l,LBXWBCSI,CBC,White blood cell count,10⁹/L,PhenoAge,D E F G,Not confirmed for cycle A
+OUTCOME,chronological_age,RIDAGEYR,DEMO,Age at examination,years,PhenoAge,A D E F G,Top-coded at 85
+OUTCOME,phenoage,Calculated,,Biological age estimate,years,Primary outcome,A D E F G,Levine algorithm
+OUTCOME,phenoage_acceleration,Calculated,,PhenoAge - predicted,years,Primary outcome,A D E F G,Residual from age regression
+DEMOGRAPHIC,age_years,RIDAGEYR,DEMO,Age at examination,years,Confounder,A D E F G,Top-coded at 85
+DEMOGRAPHIC,sex,RIAGENDR,DEMO,Sex,Male/Female,Confounder,A D E F G,1=Male 2=Female
+DEMOGRAPHIC,race_ethnicity,RIDRETH1,DEMO,Race/Hispanic origin,Category,Confounder,A D E F G,5 categories
+DEMOGRAPHIC,education,DMDEDUC2,DEMO,Education level,Category,Confounder,A D E F G,Adults only
+DEMOGRAPHIC,pir,INDFMPIR,DEMO,Poverty income ratio,Ratio,Confounder,A D E F G,Family income to poverty
+SES,poverty_category,INDFMPIR,DEMO,Poverty status,Category,Stratification,A D E F G,"<1.0, 1.0-1.99, 2.0-3.99, ≥4.0"
+BEHAVIOR,smoking_status,SMQ020/SMQ040,SMQ,Smoking status,Category,Confounder,A D E F G,Never/Former/Current
+BEHAVIOR,alcohol_drinks_week,ALQ130/ALQ120Q,ALQ,Alcohol consumption,Drinks/week,Confounder,A D E F G,Average weekly consumption
+BEHAVIOR,physical_activity_met,PAQ605/PAQ620/etc,PAQ,Physical activity,MET-min/week,Confounder,A D E F G,Vigorous + moderate
+BEHAVIOR,bmi,BMXBMI,BMX,Body mass index,kg/m²,Confounder,A D E F G,Measured
+HEALTH,diabetes,DIQ010/LBXGH/LBDGLUSI,DIQ/GLU,Diabetes status,Yes/No,Covariate,A D E F G,Self-report or lab
+HEALTH,hypertension,BPX/BPQ050A,BPX/BPQ,Hypertension status,Yes/No,Covariate,A D E F G,BP or medication
+HEALTH,cvd_history,MCQ160C/D/E/F,MCQ,Cardiovascular disease,Yes/No,Covariate,A D E F G,CHD/MI/stroke
+HEALTH,egfr,Calculated,BIOPRO,Estimated GFR,mL/min/1.73m²,Confounder,A D E F G,CKD-EPI equation
+HEALTH,ckd,Calculated,BIOPRO,Chronic kidney disease,Yes/No,Covariate,A D E F G,eGFR <60
+SURVEY,seqn,SEQN,ALL,Respondent sequence number,ID,Merge key,A D E F G,Unique identifier
+SURVEY,survey_cycle,SDDSRVYR,DEMO,Survey cycle,Category,Analysis,A D E F G,A=1999-2000 etc
+SURVEY,sdmvstra,SDMVSTRA,DEMO,Stratum,Integer,Variance estimation,A D E F G,Survey design
+SURVEY,sdmvpsu,SDMVPSU,DEMO,PSU,Integer,Variance estimation,A D E F G,Survey design
+SURVEY,wtsa2yr,WTSA2YR,PFC/SSPFC,Two-year subsample weight,Weight,PFAS analyses,A D E F G,PFAS subsample
+DERIVED,age_group,RIDAGEYR,DEMO,Age category,Category,Stratification,A D E F G,"18-39, 40-59, ≥60"
+DERIVED,menopausal_status,RIDAGEYR/RHQ031,DEMO/RHQ,Menopausal status,Category,Stratification,A D E F G,Females ≥45 years
+DERIVED,ses_tertile,INDFMPIR/DMDEDUC2,DEMO,Socioeconomic tertile,Category,Stratification,A D E F G,Composite SES
+DERIVED,pfas_tertile,Calculated,PFC/SSPFC,PFAS exposure tertile,Category,Analysis,A D E F G,Weighted tertiles
+DERIVED,pfas_quartile,Calculated,PFC/SSPFC,PFAS exposure quartile,Category,Analysis,A D E F G,Weighted quartiles
